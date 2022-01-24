@@ -41,7 +41,7 @@
         </ul>      
     </header>
     <main class="catalog-page">
-      <header class="catalog-page-header">
+      <section class="catalog-hotel">
         <h1>Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
@@ -53,7 +53,7 @@
             <a class="breadcrumbs-link">Гостиницы</a>
           </li>
         </ul>
-      </header>
+      </section>
       <section class="catalog-service">
         <h2 class="visually-hidden">Выбор жилья</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -116,11 +116,13 @@
       <section class="catalog-sorting">
         <h2 class="visually-hidden">Сортировка</h2>
         <p>Найдено гостиниц: 38</p>
-        <select class="select-control" name="sorting" aria-label="Сортировка">
-          <option value="cheap">Сначала дешёвые</option>
-          <option value="popular">Сначала популярные</option>
-          <option value="expensive">Сначала дорогие</option>
-        </select>
+        <form action="https://echo.htmlacademy.ru/" method="get">
+          <select class="select-control" name="sorting" aria-label="Сортировка">
+            <option value="cheap">Сначала дешёвые</option>
+            <option value="popular">Сначала популярные</option>
+            <option value="expensive">Сначала дорогие</option>
+          </select>
+        </form>  
         <a class="button-sorting" href="#">
           <span class="visually-hidden">Таблица</span>
         </a>
@@ -213,9 +215,11 @@
           </li>          
         </ul>
         <div>Гостиниц на странице:</div>
-        <select class="select-number" name="number" aria-label="Количество гостиниц на странице">
-          <option value="four">4</option>          
-        </select>
+        <form action="https://echo.htmlacademy.ru/" method="get">
+          <select class="select-number" name="number" aria-label="Количество гостиниц на странице">
+            <option value="four">4</option>          
+          </select>
+        </form>
       </section>
       <section class="subscribe">
         <h2>Подпишитесь на рассылку</h2>
