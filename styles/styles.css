@@ -13,14 +13,39 @@
     src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
 }
-
+html {
+    height: 100%;
+}
 body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     background-color: #ffffff;
     color: #000000;
+}
+.nav {
+    display: flex;
+    width: 1060px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.main-header-logo {
+    margin-right: 30px;
+}
+.nav-list {
+    
+    padding: 0;
+    list-style: none;
+    width: 350px;    
+}
+.nav-user {
+    width: 270px;
+    margin-left: auto;
 }
 .nav-link {
     font-weight: 700;
@@ -37,6 +62,13 @@ body {
     text-decoration: none;
     text-transform: uppercase;
 }
+.main-container {
+    flex-grow: 1;
+}
+.page-container {
+    width: 1200px;
+    margin: 0 auto;
+}
 .Welcome {
     background-image: url("../images/background/index-background-1.jpg");    
     color: #ffffff;
@@ -44,7 +76,11 @@ body {
     background-size: 100% auto;
     background-repeat: no-repeat;    
 }
-
+.logo, 
+.divider {
+    display: block;
+    margin: 0 auto;    
+}
 
 .aboutSedona h2 {
     font-weight: 700;
@@ -58,6 +94,21 @@ body {
     line-height: 36px;
     text-align: center;
 }
+.advantages-container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
 .advantages-title {
     font-weight: 700;
     font-size: 23px;
@@ -67,30 +118,35 @@ body {
 }
 .number {
     text-align: center;
-    text-transform: uppercase;    
+    text-transform: uppercase;
+    display: block;   
 }
 .advantages-description {
     text-align: center;    
 }
 
-.city, .nature {
+.white {
     color: #ffffff;
 }
 .advantages-item {
-    background-color: #83B3D3; 
+    background-color: #83B3D3;
+    width: 400px;   
+     
 }
-.advantages-list-city .advantages-item:not(:nth-child(2)){
+.advantages-item:nth-child(3), 
+.advantages-item:nth-child(5),
+.advantages-item:nth-child(8),
+.advantages-item:nth-child(10){
     background-color: #f0f6fa;
 }
-.advantages-list-city .advantages-item:nth-child(2) {
+    
+.advantages-item:nth-child(4) {
     background-color: #ffffff;
 }
-.advantages-item:nth-child(3), .advantages-item:last-child {
-    background-color: #f0f6fa;
-}
-.advantages-item:nth-child(4) {
+.advantages-item:nth-child(9) {
     background-color: #e6f0f6;
-}
+}    
+
 .registration h2 {
     font-weight: 700;
     font-size: 30px;
@@ -140,6 +196,27 @@ body {
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
+.main-footer {
+    display: flex;
+    width: 1060px;
+    margin: 0 auto;
+    
+}
+.footer-social {
+    max-width: 110px;
+    margin-right: auto;
+}
+.footer-social-list{
+    list-style: none;
+}
+.footer-contacts{
+    width: 400px;
+   
+}
+.footer-logo {
+    max-width: 120px;
+    margin-left: auto; 
+}
 .contacts-phone {
     font-size: 40px;
     line-height: 40px;
@@ -148,9 +225,8 @@ body {
     color: #000000;   
     text-decoration: none;    
 }
-.catalog-hotel {
-    color: #ffffff;
-}
+
+
 .catalog-hotel h1 {
     font-weight: 700;
     font-size: 60px;
@@ -162,6 +238,7 @@ body {
     color: #ffffff; 
     text-decoration: none;    
 }
+
 .catalog-sorting p {
     font-weight: 700;
     font-size: 30px;
@@ -173,6 +250,14 @@ body {
     background-color: #000000;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    color: #ffffff;
+}
+.catalog-filter-container {
+    display: flex;
+    margin-left: 71px;
+    margin-right: 72px;
+    justify-content: space-between;
+         
 }
 .button-add {
     font-size: 16px;
@@ -188,6 +273,25 @@ body {
     line-height: 23px;    
     color: #ffffff; 
     text-align: center;   
+}
+.catalog-sorting-container {
+    display: flex;
+    flex-direction: column; 
+    margin-left: 71px;
+    margin-right: 72px;
+}
+.sorting-container {
+    display: flex;
+    justify-content: space-between;
+   
+}
+.hotel-list-container {
+    display: flex;    
+    flex-wrap: wrap;
+}
+.pagination-container {
+    display: flex;
+    justify-content: space-between;  
 }
 .hotel-card-link {
     font-weight: 700;
