@@ -1718,3 +1718,6 @@ body {
     width: 25px;
     height: 25px;
 }
+.modal-container-close {
+    display: none;
+}
