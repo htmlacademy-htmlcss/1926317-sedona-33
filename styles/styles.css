@@ -18,6 +18,7 @@ html {
 }
 
 body {
+    min-width: 1280px;
     margin: 0 auto;
     min-height: 100%;
     font-family: "PT Sans", sans-serif;
@@ -156,29 +157,28 @@ body {
 }
 
 .nav-button {
-    display: block;
-    min-width: 160px;
-    min-height: 37px;
+    display: inline-block;
+    min-width: 130px;
+    max-width: 300px;
     background-color: #756257;
     font-size: 16px;
     line-height: 20px;
     font-style: normal;
     font-weight: 700;
-    margin-top: 14px;
-    margin-bottom: 14px;
-    margin-left: 18px;
-    padding: 0px;
+    padding-top: 9px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
     color: #ffffff;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 4px;
 }
-.nav-button span {
-    display: flex;
-    justify-content: center;
-    padding: 9px;
-}
+.nav-item-user:nth-child(3) {
+    margin-left: 21px;
+    align-self: center;
+  }
 .nav-button:hover {
     background-color: #615048;
     
@@ -382,7 +382,7 @@ body {
 .subscribe-form {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 200px;
-    grid-template-rows: 60px;
+    grid-template-rows: minmax(60px, 1fr);
     width: 800px;
     margin: 0px 200px 94px 200px;
 }
@@ -590,12 +590,14 @@ body {
 }
 .breadcrumbs {
     display: flex;
+    flex-wrap: wrap;
     margin: 0px;
     margin-left: 70px;
     margin-bottom: 45px;
     padding: 0px;
     list-style-type: none;
     align-items: center;
+    max-width: 1050px;
 }
 .breadcrumbs-item:not(:last-child) {
     margin-right: 21px;
@@ -646,6 +648,7 @@ body {
 }
 
 .catalog-sorting p {
+    max-width: 350px;
     font-weight: 700;
     font-size: 30px;
     line-height: 39px;   
@@ -660,6 +663,7 @@ body {
 }
 .catalog-filter-container {
     display: flex;
+    flex-wrap: wrap;
     margin-left: 71px;
     margin-right: 72px;
 }
@@ -673,6 +677,7 @@ body {
     padding: 0px;
     margin: 0px;
     margin-bottom: 70px;
+    max-width: 290px;
 }
 .catalog-filter-infrastructure {
     margin-right: 67px;
@@ -903,7 +908,7 @@ body {
     background-color: #83B3D3;
     border: none;
     border-radius: 4px;
-    width: 160px;
+    min-width: 160px;
     height: 48px;
     padding: 0px;
     cursor: pointer;
@@ -928,7 +933,7 @@ body {
     line-height: 23px;    
     color: #ffffff; 
     text-align: center;   
-    width: 100px;
+    min-width: 100px;
     height: 32px;
     border: none;
     cursor: pointer;
@@ -981,7 +986,7 @@ body {
     line-height: 23px;
     border: 2px solid #E6E6E6;
     border-radius: 4px;
-    padding: 12px 115px 13px 19px;
+    padding: 12px 60px 13px 19px;
     background-image: url("../images/icon/down.svg");
     background-repeat: no-repeat;
     background-position: right 21px center;
@@ -1076,12 +1081,9 @@ body {
 }
 .hotel-grid-container {
     display: grid;
-    
     grid-template-columns: 133px 25px 141px;
-    grid-template-rows: 23px 37px 37px;
-    
+    grid-template-rows: minmax(23px, 0.5fr) minmax(37px, 1fr) minmax(37px, 1fr);
     row-gap: 16px;
-    
 }
 .hotel-card span:first-child {
     font-size: 18px;
@@ -1108,7 +1110,7 @@ body {
     background-color: #756257;
     border: none;
     border-radius: 4px;
-    padding: 9px 0px 10px 0px;
+    padding: 7px 0px 8px 0px;
     grid-column: 1/2;
 }
 .button-more:hover {
@@ -1131,7 +1133,7 @@ body {
     background-color: #82B3D3;
     border: none;
     border-radius: 4px;
-    padding: 9px 0px 10px 0px;
+    padding: 7px 0px 8px 0px;
     grid-column: 3/4;
 }
 .button-favourites-active {
@@ -1182,7 +1184,7 @@ body {
     text-transform: uppercase;
     background: #F2F2F2;
     border-radius: 4px;
-    padding: 10px 32px 10px 32px;
+    padding: 8px 32px 8px 32px;
     grid-column: 2/4;
     justify-self: end;
 }
@@ -1234,12 +1236,15 @@ body {
 
 .pagination-container {
     display: flex;
+    flex-wrap: wrap;
     margin: 0px;
     padding: 0px; 
     align-items: center;
 }
 .pagination {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
     list-style-type: none;
     margin: 0px 300px 0px 0px;
     padding: 0px;
@@ -1247,11 +1252,14 @@ body {
 .pagination-item:not(:last-child) {
     margin-right: 8px;
 }
+.pagination-item {
+    margin-bottom: 5px;
+}
 .pagination-link {
     display: block;
     box-sizing: border-box;
-    width: 55px;
-    height: 55px;
+    min-width: 55px;
+    min-height: 55px;
     background-color: #83B3D3;
     color: #ffffff;
     border-radius: 4px;
@@ -1279,6 +1287,7 @@ body {
     outline: none;
 }
 .red-dragon {
+    max-width: 190px;
     line-height: 23px;
     margin-right: 51px;
 }
@@ -1297,7 +1306,7 @@ body {
     line-height: 23px;
     border: 2px solid #E6E6E6;
     border-radius: 4px;
-    padding: 13px 115px 12px 17px;
+    padding: 13px 60px 12px 17px;
     background-image: url("../images/icon/down.svg");
     background-repeat: no-repeat;
     background-position: right 21px center;
