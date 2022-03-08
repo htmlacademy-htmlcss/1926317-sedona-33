@@ -211,9 +211,12 @@ body {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
     padding-top: 51px;
-
+    height: 485px;
+}
+.divider {
+    padding-top: 25.5px;
 }
 .logo {
     display: block;
