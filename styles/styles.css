@@ -270,6 +270,7 @@ body {
     flex-direction: column;
     padding: 0px;
     margin: 0px;
+    min-height: 384px;
 }
 
 .advantages-title {
@@ -315,6 +316,8 @@ body {
 .photo1, 
 .photo2 {
     object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .advantages-description-city {
@@ -337,7 +340,12 @@ body {
 .advantages-item:nth-child(10){
     background-color: #f0f6fa;
 }
-    
+
+.photo {
+    display: inline-flex;
+    min-height: 384px;
+}
+
 .advantages-item:nth-child(4) {
     background-color: #ffffff;
 }
